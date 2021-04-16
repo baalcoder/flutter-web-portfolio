@@ -15,7 +15,7 @@ class MyProjects extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 100),
         child: Column(
           children: [
-            Text('MY PROJECTS', style: AppStyles.title),
+            Text('PROYECTOS', style: AppStyles.title),
             Container(width: 100, height: 2, color: AppColors.yellow),
             const SizedBox(height: 3),
             Container(width: 75, height: 2, color: AppColors.yellow),
@@ -33,7 +33,7 @@ class MyProjects extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              'MY PROJECTS',
+              'PROYECTOS',
               style: AppStyles.title,
               textAlign: TextAlign.center,
             ),
@@ -62,8 +62,23 @@ class MyProjects extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: MediaQuery.of(context).size.width * .3,
-                    child: Image.asset(project.image),
+                    height: MediaQuery.of(context).size.width * .025,
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    margin: const EdgeInsets.symmetric(vertical: 20),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(1000),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(1000),
+                      child: Image.asset(
+                        project.image,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
                   SizedBox(width: MediaQuery.of(context).size.width * .075),
                   Expanded(
@@ -107,7 +122,10 @@ class MyProjects extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          child: Text('Visit'),
+                          child: Text('Conoce más'),
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.width * .025,
                         ),
                       ],
                     ),
@@ -126,9 +144,20 @@ class MyProjects extends StatelessWidget {
           width: MediaQuery.of(context).size.width * .7,
           child: Column(
             children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.width * .75,
-                child: Image.asset(project.image),
+              Container(
+                height: MediaQuery.of(context).size.width * .55,
+                margin: const EdgeInsets.symmetric(vertical: 20),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(1000),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(1000),
+                  child: Image.asset(
+                    project.image,
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
               SizedBox(width: MediaQuery.of(context).size.width * .075),
               SizedBox(
@@ -147,12 +176,13 @@ class MyProjects extends StatelessWidget {
               ),
               Wrap(
                 spacing: 10,
+                runSpacing: 10,
                 alignment: WrapAlignment.center,
                 children:
                     project.skills.map((s) => Chip(label: Text(s))).toList(),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.width * .025,
+                height: MediaQuery.of(context).size.width * .035,
               ),
               OutlineButton(
                 onPressed: () {
@@ -171,7 +201,7 @@ class MyProjects extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
-                child: Text('Visit'),
+                child: Text('Conoce más'),
               ),
               Divider(
                 color: AppColors.black.withOpacity(.1),

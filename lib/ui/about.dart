@@ -6,11 +6,21 @@ import '../data/skills.dart';
 import '../config/constants.dart';
 import '../config/styles.dart';
 import '../config/colors.dart';
+import 'dart:math' as math; // import this
 
 class About extends StatelessWidget {
-  final String _avatar = 'images/ouahid.png';
+  final String _avatar = 'images/photo_balcoder.png';
   final String _description =
-      "I am developer has around 4 years experience developing mobile and web applications, using different languages and techniques.";
+      "Apasionado por la teconologia y la innovacion, CTO de la compañia AntCodeIT. \n\n\n"
+      "Sebastian Balvin Mendoza es una persona segura, persistente en el alcance de sus objetivos, con alta capacidad "
+      "para asumir responsabilidades y trabajar en equipo, integro, respetuoso, sabe reconocer "
+      "sus fortalezas y debilidades, de igual forma poseé habilidades sociales y adecuadas "
+      "relaciones interpersonales. \n\n"
+      "Capaz de actuar con decisión y precisión demostrando profesionalismo en todo "
+      "momento, actuando con el ejemplo y compartiendo experiencias con los demás e "
+      "incentivándolos a seguir adelante pese a las adversidades para llegar al objetivo trazado.\n\n"
+      "Con excelentes habilidades de liderazgo, proactividad, estratega e investigador, ha creado diferentes equipos de trabajo "
+      "generado empleo y demanda con su empresa AntCodeIT.";
 
   @override
   Widget build(BuildContext context) => ResponsiveWidget(
@@ -42,7 +52,7 @@ class About extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'ABOUT ME',
+                          'ACERCA DE MI',
                           style: TextStyle(
                             color: AppColors.yellow,
                             fontSize: 40,
@@ -65,7 +75,7 @@ class About extends StatelessWidget {
                               textColor: Colors.white,
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 30, vertical: 20),
-                              child: Text('HIRE ME NOW'),
+                              child: Text('CONTACTO'),
                             ),
                             const SizedBox(width: 20),
                             RaisedButton(
@@ -74,7 +84,7 @@ class About extends StatelessWidget {
                               textColor: Colors.white,
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 30, vertical: 20),
-                              child: Text('VIEW RESUME'),
+                              child: Text('VER HOJA DE VIDA'),
                             ),
                           ],
                         ),
@@ -84,7 +94,7 @@ class About extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 100),
-              Text('MY SKILLS', style: AppStyles.title),
+              Text('MIS HABILIDADES', style: AppStyles.title),
               Container(width: 100, height: 2, color: AppColors.yellow),
               const SizedBox(height: 3),
               Container(width: 75, height: 2, color: AppColors.yellow),
@@ -120,7 +130,7 @@ class About extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Text(
-                'ABOUT ME',
+                'ACERCA DE MI',
                 style: TextStyle(
                   color: AppColors.yellow,
                   fontSize: 20,
@@ -142,7 +152,7 @@ class About extends StatelessWidget {
                 textColor: Colors.white,
                 padding:
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-                child: Text('HIRE ME NOW'),
+                child: Text('CONTACTO'),
               ),
               const SizedBox(height: 20),
               RaisedButton(
@@ -151,10 +161,10 @@ class About extends StatelessWidget {
                 textColor: Colors.white,
                 padding:
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-                child: Text('VIEW RESUME'),
+                child: Text('VER HOJA DE VIDA'),
               ),
               const SizedBox(height: 50),
-              Text('MY SKILLS', style: AppStyles.title),
+              Text('MIS HABILIDADES', style: AppStyles.title),
               Container(width: 75, height: 2, color: AppColors.yellow),
               const SizedBox(height: 3),
               Container(width: 50, height: 2, color: AppColors.yellow),

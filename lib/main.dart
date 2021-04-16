@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'OuahidDev',
+      title: 'Balcoder',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         accentColor: AppColors.yellow,

@@ -6,10 +6,10 @@ import '../config/constants.dart';
 import '../config/colors.dart';
 
 class Header extends StatelessWidget {
-  final String _name = "Abdelouahed";
-  final String _job = "Mobile Developer";
+  final String _name = "Sebastian Balvin";
+  final String _job = "Desarrollador Líder";
   final String _description =
-      "I am developer has around 4 years experience developing mobile and web applications, using different languages and techniques.";
+      "Soy desarrollador y tengo alrededor de 4 años de experiencia desarrollando aplicaciones móviles y web, utilizando diferentes lenguajes, técnicas, metodologias ágiles y actuales frameworks.";
 
   @override
   Widget build(BuildContext context) => ResponsiveWidget(
@@ -21,8 +21,20 @@ class Header extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(1000),
+                child: Container(
+                  width: 140,
+                  height: 140,
+                  color: AppColors.yellow,
+                  child: Image.asset('images/balcoder.png'),
+                ),
+              ),
+              SizedBox(
+                height: 50,
+              ),
               Text(
-                'I’m $_name',
+                '$_name  (balcoder)',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 40,
@@ -55,7 +67,7 @@ class Header extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
                 onPressed: _downloadCV,
-                child: Text('Download CV'),
+                child: Text('Hoja de Vida'),
               ),
               const SizedBox(height: 100),
             ],
@@ -69,8 +81,20 @@ class Header extends StatelessWidget {
           child: FittedBox(
             child: Column(
               children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(1000),
+                  child: Container(
+                    width: 180,
+                    height: 180,
+                    color: AppColors.yellow,
+                    child: Image.asset('images/balcoder.png'),
+                  ),
+                ),
+                SizedBox(
+                  height: 12,
+                ),
                 Text(
-                  'I’m $_name',
+                  '$_name  (balcoder)',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 30,
@@ -105,7 +129,7 @@ class Header extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
                   onPressed: _downloadCV,
-                  child: Text('Download CV'),
+                  child: Text('Hoja de Vida'),
                 ),
                 const SizedBox(height: 100),
               ],

@@ -82,20 +82,20 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                 ),
-                title: Padding(
-                  padding: EdgeInsets.only(
-                    left: MediaQuery.of(context).size.width * .15,
-                  ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(1000),
-                    child: Container(
-                      width: 40,
-                      height: 40,
-                      color: AppColors.yellow,
-                      child: Image.asset('images/ouahid.png'),
-                    ),
-                  ),
-                ),
+                // title: Padding(
+                //   padding: EdgeInsets.only(
+                //     left: MediaQuery.of(context).size.width * .15,
+                //   ),
+                //   child: ClipRRect(
+                //     borderRadius: BorderRadius.circular(1000),
+                //     child: Container(
+                //       width: 80,
+                //       height: 80,
+                //       color: AppColors.greyLight,
+                //       child: Image.asset('images/balcoder.png'),
+                //     ),
+                //   ),
+                // ),
                 bottom: PreferredSize(
                   preferredSize: Size.fromHeight(500),
                   child: Header(),
@@ -107,7 +107,7 @@ class _HomeState extends State<Home> {
                         onPressed: _scrollToAbout,
                         highlightColor: Colors.white60,
                         child: Text(
-                          'About Me',
+                          'Acerca de mi',
                           style: TextStyle(
                               color: Colors.white, fontWeight: FontWeight.bold),
                         ),
@@ -115,7 +115,7 @@ class _HomeState extends State<Home> {
                       MaterialButton(
                         onPressed: _scrollToStatistics,
                         child: Text(
-                          'Experience',
+                          'Experiencia',
                           style: TextStyle(
                               color: Colors.white, fontWeight: FontWeight.bold),
                         ),
@@ -123,7 +123,7 @@ class _HomeState extends State<Home> {
                       MaterialButton(
                         onPressed: _scrollToWorkingProcess,
                         child: Text(
-                          'Process',
+                          'Metodología',
                           style: TextStyle(
                               color: Colors.white, fontWeight: FontWeight.bold),
                         ),
@@ -131,7 +131,7 @@ class _HomeState extends State<Home> {
                       MaterialButton(
                         onPressed: _scrollToRecentProjects,
                         child: Text(
-                          'Portfolio',
+                          'Portafolio',
                           style: TextStyle(
                               color: Colors.white, fontWeight: FontWeight.bold),
                         ),
@@ -145,7 +145,7 @@ class _HomeState extends State<Home> {
                           vertical: 15,
                         ),
                         child: Text(
-                          'Contact Me',
+                          'Contacto',
                           style: TextStyle(
                               color: Colors.white, fontWeight: FontWeight.bold),
                         ),
@@ -177,7 +177,7 @@ class _HomeState extends State<Home> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(1000),
                     child: Image.asset(
-                      'images/ouahid.png',
+                      'images/photo_balcoder.png',
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -186,28 +186,28 @@ class _HomeState extends State<Home> {
                 ListTile(
                   onTap: _scrollToAbout,
                   title: Text(
-                    'About Me',
+                    'Acerca de Mi',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
                 ListTile(
                   onTap: _scrollToStatistics,
                   title: Text(
-                    'Experience',
+                    'Experiencia',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
                 ListTile(
                   onTap: _scrollToWorkingProcess,
                   title: Text(
-                    'Process',
+                    'Metodología',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
                 ListTile(
                   onTap: _scrollToRecentProjects,
                   title: Text(
-                    'Portfolio',
+                    'Portafolio',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -222,7 +222,7 @@ class _HomeState extends State<Home> {
                       vertical: 15,
                     ),
                     child: Text(
-                      'Contact Me',
+                      'Contacto',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),
@@ -243,30 +243,10 @@ class _HomeState extends State<Home> {
                     const SizedBox(width: 20),
                     InkWell(
                       onTap: () {
-                        launch(AppConstants.linkedin);
-                      },
-                      child: AppIcon(
-                        'icons/linkedin.png',
-                        color: AppColors.black,
-                      ),
-                    ),
-                    const SizedBox(width: 20),
-                    InkWell(
-                      onTap: () {
                         launch(AppConstants.twitter);
                       },
                       child: AppIcon(
                         'icons/twitter.png',
-                        color: AppColors.black,
-                      ),
-                    ),
-                    const SizedBox(width: 20),
-                    InkWell(
-                      onTap: () {
-                        launch(AppConstants.facebook);
-                      },
-                      child: AppIcon(
-                        'icons/facebook.png',
                         color: AppColors.black,
                       ),
                     ),
@@ -295,19 +275,10 @@ class _HomeState extends State<Home> {
                 leading: Align(
                   child: Builder(
                     builder: (ctx) => InkWell(
-                      onTap: () {
-                        Scaffold.of(ctx).openDrawer();
-                      },
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(1000),
-                        child: Container(
-                          width: 40,
-                          height: 40,
-                          color: AppColors.yellow,
-                          child: Image.asset('images/ouahid.png'),
-                        ),
-                      ),
-                    ),
+                        onTap: () {
+                          Scaffold.of(ctx).openDrawer();
+                        },
+                        child: Icon(Icons.menu)),
                   ),
                 ),
                 flexibleSpace: Container(

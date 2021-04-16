@@ -9,9 +9,9 @@ import 'icon.dart';
 
 class Footer extends StatelessWidget {
   final String _getInTouch =
-      "You have an idea, I am here to turn your dream into real digital solution.";
+      "Tienes una idea, estoy aquí para convertir tu sueño en una solución digital real.";
   final String _description =
-      "I am developer has around 4 years experience developing mobile and web applications, using different languages and techniques.";
+      "Soy desarrollador y tengo alrededor de 4 años de experiencia desarrollando aplicaciones móviles y web, utilizando diferentes lenguajes, técnicas, metodologias ágiles y actuales frameworks.";
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class Footer extends StatelessWidget {
                           ),
                           const SizedBox(width: 7.5),
                           Text(
-                            'GET IN TOUCH',
+                            'PONERSE EN CONTACTO',
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w700,
@@ -59,7 +59,7 @@ class Footer extends StatelessWidget {
                       ),
                       const SizedBox(height: 20),
                       Text(
-                        'Email Address',
+                        'Correo Electrónico',
                         style: TextStyle(
                           color: AppColors.greyLight,
                           fontWeight: FontWeight.w800,
@@ -75,7 +75,7 @@ class Footer extends StatelessWidget {
                       ),
                       const SizedBox(height: 20),
                       Text(
-                        'Phone Number',
+                        'Número de Contacto',
                         style: TextStyle(
                           color: AppColors.greyLight,
                           fontWeight: FontWeight.w800,
@@ -91,7 +91,7 @@ class Footer extends StatelessWidget {
                       ),
                       const SizedBox(height: 20),
                       Text(
-                        'Location',
+                        'Ubicación',
                         style: TextStyle(
                           color: AppColors.greyLight,
                           fontWeight: FontWeight.w800,
@@ -123,7 +123,7 @@ class Footer extends StatelessWidget {
                           ),
                           const SizedBox(width: 7.5),
                           Text(
-                            'ABOUT ME',
+                            'ACERCA DE MI',
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w700,
@@ -157,7 +157,7 @@ class Footer extends StatelessWidget {
                           ),
                           const SizedBox(width: 7.5),
                           Text(
-                            'RECENT PROJECTS',
+                            'PROYECTOS RECIENTES',
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w700,
@@ -189,7 +189,7 @@ class Footer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Proudly powered by OuahidDev ©${DateTime.now().year}',
+                  'Proudly powered by Balcoder ©${DateTime.now().year}',
                   style: TextStyle(
                     color: AppColors.greyLight.withOpacity(.75),
                   ),
@@ -220,7 +220,7 @@ class Footer extends StatelessWidget {
                     ),
                     const SizedBox(width: 7.5),
                     Text(
-                      'GET IN TOUCH',
+                      'PONERSE EN CONTACTO',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w700,
@@ -238,7 +238,7 @@ class Footer extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 Text(
-                  'Email Address',
+                  'Correo Electrónico',
                   style: TextStyle(
                     color: AppColors.greyLight,
                     fontWeight: FontWeight.w800,
@@ -254,7 +254,7 @@ class Footer extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 Text(
-                  'Phone Number',
+                  'Número de Contacto',
                   style: TextStyle(
                     color: AppColors.greyLight,
                     fontWeight: FontWeight.w800,
@@ -270,7 +270,7 @@ class Footer extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 Text(
-                  'Location',
+                  'Ubicación',
                   style: TextStyle(
                     color: AppColors.greyLight,
                     fontWeight: FontWeight.w800,
@@ -300,7 +300,7 @@ class Footer extends StatelessWidget {
                     ),
                     const SizedBox(width: 7.5),
                     Text(
-                      'ABOUT ME',
+                      'ACERCA DE MI',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w700,
@@ -332,7 +332,7 @@ class Footer extends StatelessWidget {
                     ),
                     const SizedBox(width: 7.5),
                     Text(
-                      'RECENT PROJECTS',
+                      'PROYECTOS RECIENTES',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w700,
@@ -345,7 +345,7 @@ class Footer extends StatelessWidget {
                   spacing: 10,
                   runSpacing: 10,
                   children: PROJECTS
-                      .take(4)
+                      .take(6)
                       .map((p) => _buildProject(context, p))
                       .toList(),
                 )
@@ -365,7 +365,7 @@ class Footer extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             Text(
-              'Proudly powered by OuahidDev ©${DateTime.now().year}',
+              'Proudly powered by balcoder ©${DateTime.now().year}',
               style: TextStyle(
                 color: AppColors.greyLight.withOpacity(.75),
               ),
@@ -383,14 +383,14 @@ class Footer extends StatelessWidget {
         },
         child: ResponsiveWidget(
           desktopScreen: Container(
-            color: AppColors.greyLight,
+            color: Colors.white,
             padding: const EdgeInsets.all(15),
             width: MediaQuery.of(context).size.width * .1,
             height: MediaQuery.of(context).size.width * .1,
             child: Image.asset(project.image),
           ),
           mobileScreen: Container(
-            color: AppColors.greyLight,
+            color: Colors.white,
             padding: const EdgeInsets.all(15),
             width: MediaQuery.of(context).size.width * .2,
             height: MediaQuery.of(context).size.width * .2,
@@ -409,13 +409,6 @@ class Footer extends StatelessWidget {
         const SizedBox(width: 20),
         InkWell(
           onTap: () {
-            launch(AppConstants.linkedin);
-          },
-          child: AppIcon('icons/linkedin.png'),
-        ),
-        const SizedBox(width: 20),
-        InkWell(
-          onTap: () {
             launch(AppConstants.twitter);
           },
           child: AppIcon('icons/twitter.png'),
@@ -423,9 +416,9 @@ class Footer extends StatelessWidget {
         const SizedBox(width: 20),
         InkWell(
           onTap: () {
-            launch(AppConstants.facebook);
+            launch(AppConstants.instagram);
           },
-          child: AppIcon('icons/facebook.png'),
+          child: AppIcon('images/instagram.png'),
         ),
       ];
 }

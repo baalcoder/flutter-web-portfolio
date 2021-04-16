@@ -33,7 +33,7 @@ class _ContactUsState extends State<ContactUs> {
         ),
         child: Column(
           children: [
-            Text('GET IN TOUCH', style: AppStyles.title),
+            Text('PONERSE EN CONTACTO', style: AppStyles.title),
             Container(width: 100, height: 2, color: AppColors.yellow),
             const SizedBox(height: 3),
             Container(width: 75, height: 2, color: AppColors.yellow),
@@ -47,19 +47,19 @@ class _ContactUsState extends State<ContactUs> {
                     children: [
                       _buildContactInfo(
                         'icons/email.png',
-                        'Mail Us:',
+                        'Envíame un correo:',
                         AppConstants.mail,
                       ),
                       const SizedBox(height: 20),
                       _buildContactInfo(
                         'icons/call.png',
-                        'Call Us:',
+                        'Contacto:',
                         AppConstants.phone,
                       ),
                       const SizedBox(height: 20),
                       _buildContactInfo(
                         'icons/pin.png',
-                        'Visit Us:',
+                        'Ubicación',
                         AppConstants.location,
                       ),
                     ],
@@ -82,7 +82,7 @@ class _ContactUsState extends State<ContactUs> {
         child: Column(
           children: [
             Text(
-              'GET IN TOUCH',
+              'PONERSE EN CONTACTO',
               style: AppStyles.title,
               textAlign: TextAlign.center,
             ),
@@ -97,19 +97,19 @@ class _ContactUsState extends State<ContactUs> {
                   children: [
                     _buildContactInfo(
                       'icons/email.png',
-                      'Mail Us:',
+                      'Envíame un correo:',
                       AppConstants.mail,
                     ),
                     const SizedBox(height: 20),
                     _buildContactInfo(
                       'icons/call.png',
-                      'Call Us:',
+                      'Contacto',
                       AppConstants.phone,
                     ),
                     const SizedBox(height: 20),
                     _buildContactInfo(
                       'icons/pin.png',
-                      'Visit Us:',
+                      'Ubicación',
                       AppConstants.location,
                     ),
                   ],
@@ -158,7 +158,7 @@ class _ContactUsState extends State<ContactUs> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Have Something To Write?',
+          '¿Tienes algo que escribir?',
           style: TextStyle(
             color: AppColors.black,
             fontSize: 20,
@@ -178,10 +178,10 @@ class _ContactUsState extends State<ContactUs> {
                       validator: (text) {
                         return (text.isValidName())
                             ? null
-                            : 'Please insert valid name!';
+                            : 'Profavor ingrese un nombre valido!';
                       },
                       decoration: InputDecoration(
-                        hintText: 'Your Name',
+                        hintText: 'Nombre',
                         border: OutlineInputBorder(),
                       ),
                     ),
@@ -192,10 +192,10 @@ class _ContactUsState extends State<ContactUs> {
                       validator: (text) {
                         return (text.isValidEmail)
                             ? null
-                            : 'Please insert valid email!';
+                            : 'Profavor ingrese un e-mail valido!';
                       },
                       decoration: InputDecoration(
-                        hintText: 'Your Email',
+                        hintText: 'E-mail',
                         border: OutlineInputBorder(),
                       ),
                     ),
@@ -209,10 +209,10 @@ class _ContactUsState extends State<ContactUs> {
                 validator: (text) {
                   return (text.isValidName(minLength: 10))
                       ? null
-                      : 'Please insert valid message!, at least 10 characters';
+                      : 'Profavor ingrese un mensaje valido, al menos 10 caractéres';
                 },
                 decoration: InputDecoration(
-                  hintText: 'Your Message',
+                  hintText: 'Mensaje',
                   border: OutlineInputBorder(),
                 ),
               ),
@@ -223,7 +223,7 @@ class _ContactUsState extends State<ContactUs> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
                 onPressed: _sendMail,
-                child: Text('Send'),
+                child: Text('Enviar'),
               ),
             ],
           ),
