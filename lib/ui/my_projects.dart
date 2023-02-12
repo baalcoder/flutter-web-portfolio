@@ -62,23 +62,8 @@ class MyProjects extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: MediaQuery.of(context).size.width * .025,
-                  ),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    margin: const EdgeInsets.symmetric(vertical: 20),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(1000),
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(1000),
-                      child: Image.asset(
-                        project.image,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                    height: MediaQuery.of(context).size.width * .3,
+                    child: Image.asset(project.image!),
                   ),
                   SizedBox(width: MediaQuery.of(context).size.width * .075),
                   Expanded(
@@ -88,40 +73,40 @@ class MyProjects extends StatelessWidget {
                         SizedBox(
                           height: MediaQuery.of(context).size.width * .01,
                         ),
-                        Text(project.name, style: AppStyles.title),
+                        Text(project.name!, style: AppStyles.title),
                         SizedBox(
                           height: MediaQuery.of(context).size.width * .01,
                         ),
-                        Text(project.description),
+                        Text(project.description!),
                         SizedBox(
                           height: MediaQuery.of(context).size.width * .025,
                         ),
                         Wrap(
                           spacing: 10,
-                          children: project.skills
+                          children: project.skills!
                               .map((s) => Chip(label: Text(s)))
                               .toList(),
                         ),
                         SizedBox(
                           height: MediaQuery.of(context).size.width * .025,
                         ),
-                        OutlineButton(
+                      TextButton(
                           onPressed: () {
-                            launch(project.url);
+                            launch(project.url!);
                           },
-                          color: AppColors.yellow,
-                          textColor: AppColors.yellow,
-                          borderSide: BorderSide(
-                            color: AppColors.yellow.withOpacity(.5),
-                            width: 5,
-                          ),
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 50,
-                            vertical: 20,
-                          ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ),
+                          // color: AppColors.yellow,
+                          // textColor: AppColors.yellow,
+                          // borderSide: BorderSide(
+                          //   color: AppColors.yellow!.withOpacity(.5),
+                          //   width: 5,
+                          // ),
+                          // padding: const EdgeInsets.symmetric(
+                          //   horizontal: 50,
+                          //   vertical: 20,
+                          // ),
+                          // shape: RoundedRectangleBorder(
+                          //   borderRadius: BorderRadius.circular(20),
+                          // ),
                           child: Text('Conoce más'),
                         ),
                         SizedBox(
@@ -144,31 +129,20 @@ class MyProjects extends StatelessWidget {
           width: MediaQuery.of(context).size.width * .7,
           child: Column(
             children: [
-              Container(
-                height: MediaQuery.of(context).size.width * .55,
-                margin: const EdgeInsets.symmetric(vertical: 20),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(1000),
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(1000),
-                  child: Image.asset(
-                    project.image,
-                    fit: BoxFit.cover,
-                  ),
-                ),
+              SizedBox(
+                height: MediaQuery.of(context).size.width * .75,
+                child: Image.asset(project.image!),
               ),
               SizedBox(width: MediaQuery.of(context).size.width * .075),
               SizedBox(
                 height: MediaQuery.of(context).size.width * .01,
               ),
-              Text(project.name, style: AppStyles.title),
+              Text(project.name!, style: AppStyles.title),
               SizedBox(
                 height: MediaQuery.of(context).size.width * .01,
               ),
               Text(
-                project.description,
+                project.description!,
                 textAlign: TextAlign.center,
               ),
               SizedBox(
@@ -179,28 +153,28 @@ class MyProjects extends StatelessWidget {
                 runSpacing: 10,
                 alignment: WrapAlignment.center,
                 children:
-                    project.skills.map((s) => Chip(label: Text(s))).toList(),
+                    project.skills!.map((s) => Chip(label: Text(s))).toList(),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.width * .035,
               ),
-              OutlineButton(
+           TextButton(
                 onPressed: () {
-                  launch(project.url);
+                  launch(project.url!);
                 },
-                color: AppColors.yellow,
-                textColor: AppColors.yellow,
-                borderSide: BorderSide(
-                  color: AppColors.yellow.withOpacity(.5),
-                  width: 5,
-                ),
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 50,
-                  vertical: 20,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
+                // color: AppColors.yellow,
+                // textColor: AppColors.yellow,
+                // borderSide: BorderSide(
+                //   color: AppColors.yellow!.withOpacity(.5),
+                //   width: 5,
+                // ),
+                // padding: const EdgeInsets.symmetric(
+                //   horizontal: 50,
+                //   vertical: 20,
+                // ),
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(20),
+                // ),
                 child: Text('Conoce más'),
               ),
               Divider(
